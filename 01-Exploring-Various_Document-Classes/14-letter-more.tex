@@ -1,0 +1,16 @@
+\documentclass[fromalign=right,addrfield=true,
+  foldmarks=true,parskip=full]{scrlttr2}
+\setkomavar{fromname}{Thomas Smith}
+\setkomavar{fromaddress}{123 Blvd \\ City, CC 12345}
+\setkomavar*{enclseparator}{Attached}
+\setkomavar{signature}{Thomas}
+\renewcommand{\raggedsignature}{\raggedright}
+\date{\today}
+\begin{document}
+\begin{letter}{Agency \\ 5th Avenue \\ Capital City, CC 12345}
+\opening{Dear Sir or Madam,}
+the actual content of the letter follows.
+\closing{Yours sincerely}
+\encl{Curriculum vitae, certificates}
+\end{letter} 
+\end{document}
