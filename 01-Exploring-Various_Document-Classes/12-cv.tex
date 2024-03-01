@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper,sans]{moderncv}% demo option for dummy photo
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
+\name{John}{Doe}
+\title{CV title}
+\address{street and number}{postcode city}{country}
+\phone[mobile]{+1~(234)~567~890}
+\phone[fixed]{+2~(345)~678~901}
+\email{john@doe.org}
+\homepage{www.johndoe.com}
+\photo[64pt][0.4pt]{picture.jpg}
+\begin{document}
+\makecvtitle
+\section{Education}
+\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\section{Experience}
+\subsection{Vocational}
+\cventry{year--year}{Job title}{Employer}{City}{}
+  {General description\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+\item Achievement 1;
+\item Achievement 2, with sub-achievements:
+  \begin{itemize}%
+  \item Sub-achievement (a)
+  \item Sub-achievement (b)
+  \end{itemize}
+\item Achievement 3.
+\end{itemize}}
+\cventry{year--year}{Job title}{Employer}{City}{}
+  {Description line 1\newline{}Description line 2}
+\subsection{Miscellaneous}
+\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\section{Languages}
+\cvitemwithcomment{Language 1}{Skill level}{Comment}
+\cvitemwithcomment{Language 2}{Skill level}{Comment}
+\end{document}
