@@ -1,0 +1,32 @@
+\documentclass[fontsize=11pt,paper=a5,pagesize=auto]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{blindtext}
+\frenchspacing
+\begin{document}
+\begin{titlepage}
+  \vspace*{1cm}
+  {\huge\raggedright The Book\par}
+  \noindent\hrulefill\par
+  {\LARGE\raggedleft The Author\par}
+  \vfill
+  {\Large\raggedleft Institute\par}
+\end{titlepage}
+\tableofcontents 
+\part{First portion}
+\chapter{The beginning}
+Some introductional text comes here.
+\section{A first section}
+Dummy text will follow.
+\blindtext
+\section{Another section}
+\Blindtext
+\appendix
+\part{Appendix}
+\chapter{An addendum}
+\section{Section within the appendix}
+\blindtext
+\end{document}
