@@ -1,0 +1,35 @@
+\documentclass[paper=a4,oneside,fontsize=11pt,
+  parskip=full]{scrartcl}
+\usepackage{showframe}
+\pagestyle{empty}
+\begin{document}
+\tableofcontents
+\addsec{Introduction}
+This document will be our starting point for simple
+documents. It is suitable for a single page or up to
+a couple of dozen pages.
+
+The text will be divided into sections.
+\section{The first section}
+This first text will contain
+\begin{itemize}
+  \item a table of contents,
+  \item a bulleted list,
+  \item headings and some text and math in section,
+  \item referencing such as to section \ref{sec:maths} and
+      equation (\ref{eq:integral}).
+\end{itemize}
+We can use this document as a template for filling in
+our own content.
+\section{Some maths}
+\label{sec:maths}
+When we write a scientific or technical document, we usually
+include math formulas. To get a brief glimpse of the look of
+maths, we will look at an integral approximation of a function
+$f(x)$ as a sum with weights $w_i$:
+\begin{equation}
+  \label{eq:integral}
+  \int_a^b f(x)\,\mathrm{d}x \approx (b-a)
+  \sum_{i=0}^n w_i f(x_i)
+\end{equation}
+\end{document}

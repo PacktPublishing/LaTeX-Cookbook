@@ -1,0 +1,25 @@
+\documentclass[a5paper]{article}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{showframe}
+\usepackage{eso-pic}
+\usepackage{picture}
+\pagestyle{empty}
+\begin{document}
+\AddToShipoutPictureBG{%
+  \setlength{\unitlength}{1cm}%
+  \put(2.5,2){Test document}%
+  \put(\paperwidth-2cm,2cm){\llap{\thepage}}%
+}
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{Page bottom left}%
+  \AtPageUpperLeft{\raisebox{-\height}{Page top left}}%
+  \AtTextUpperLeft{\raisebox{-\height}{%
+    \color{red}Text area top left}}%
+}
+\AddToShipoutPictureFG{%
+  \AtPageCenter{\rotatebox{15}{\makebox[0pt]{%
+    \Huge\bfseries\color{red}Confidential}}}%
+}
+\lipsum
+\end{document}

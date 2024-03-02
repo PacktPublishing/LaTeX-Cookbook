@@ -1,0 +1,23 @@
+\documentclass{article}% compile until last test is stable
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{microtype}
+\usepackage[fontsize=10pt,baseline=12pt]{grid}
+\usepackage{gridset}
+\usepackage{amsmath}
+\begin{document}
+\twocolumn
+\section*{Two columns}
+\blindtext[3]
+\begin{figure}
+  \centering
+  \fbox{\makebox(50,50){}}
+  \caption{A dummy figure}
+\end{figure}
+\begin{align}
+  y &= \sum_{n=1}^3 f(n) \\
+    &= f(1) + f(2) + f(3)
+\end{align}
+\par\vskipnextgrid\noindent
+Text
+\end{document}

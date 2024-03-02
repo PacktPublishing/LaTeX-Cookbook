@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{lipsum}
+\usepackage{pullquote}
+% http://bazaar.launchpad.net/~tex-sx/tex-sx/development/view/head:/pullquote.dtx
+\newcommand{\myquote}{%
+  \parbox{4cm}{
+    \hrule\vspace{1ex}
+    \textit{I can’t go to a restaurant and order food
+      because I keep looking at the fonts on the menu.}
+
+    \hfill Knuth, Donald (2002)%
+    \vspace{1ex}
+    \hrule
+  }%
+}
+\pagestyle{empty}
+\begin{document}
+\begin{pullquote}{object=\myquote}
+  \lipsum[1]
+\end{pullquote}
+\end{document}

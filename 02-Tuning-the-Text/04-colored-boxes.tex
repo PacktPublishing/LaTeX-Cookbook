@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[pangram]{blindtext}
+\usepackage{tcolorbox}
+\begin{document}
+\begin{tcolorbox}
+  \blindtext
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=\textbf{Examples},
+  colback=blue!5!white,colframe=blue!75!white]
+  The text below consists of pangrams.
+  \tcblower
+  \blindtext[3]
+\end{tcolorbox}
+
+\tcbset{colframe=green!50!black,colback=white,
+  colupper=green!30!black,fonttitle=\bfseries, center title,
+  nobeforeafter, tcbox raise base}
+  Normal text \tcbox{Boxed text}
+\tcbox[left=0pt,right=0pt,top=0.5ex,bottom=0pt,boxsep=0pt,
+  toptitle=0.5ex,bottomtitle=0.5ex,title=Sample table]{
+  \begin{tabular}[t]{rl}
+    Number & 100 \\
+    Sum    & 350
+  \end{tabular}}
+\end{document}

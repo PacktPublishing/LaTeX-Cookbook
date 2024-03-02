@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{microtype}
+\usepackage[fontsize=10pt,baseline=12pt]{grid}
+\begin{document}
+\twocolumn
+\section*{Two columns}
+\blindtext[3]
+\begin{figure}
+  \centering
+  \fbox{\makebox(50,50){}}
+  \caption{A dummy figure}
+\end{figure}
+\begin{gridenv}
+  \begin{equation}
+    \sum_n f(n)
+  \end{equation}
+\end{gridenv}
+Text
+\end{document}
