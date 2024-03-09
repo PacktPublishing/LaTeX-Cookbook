@@ -1,0 +1,9 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis} [grid, xtick = {-360,-270,...,360}]
+    \addplot [domain=-360:360, samples=100, thick] { sin(x) };
+  \end{axis}
+\end{tikzpicture}
+\end{document}

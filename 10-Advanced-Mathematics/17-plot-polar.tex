@@ -1,0 +1,10 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\begin{document}
+\begin{tikzpicture}
+  \begin{polaraxis}
+    \addplot[domain=0:360,samples=300] {sin(6*x)}; 
+  \end{polaraxis}
+\end{tikzpicture}
+\end{document}

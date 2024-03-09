@@ -1,0 +1,10 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{shift}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis} [shift, xtick = {-360,-270,...,360}]
+    \addplot [domain=-360:360, samples=100, thick] { sin(x) };
+  \end{axis}
+\end{tikzpicture}
+\end{document}

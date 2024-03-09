@@ -1,0 +1,27 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\begin{document}
+\begin{tikzpicture}
+ \tkzDefPoint(0,0){A}
+ \tkzDefPoint(4,1){B}
+ \tkzInterCC(A,B)(B,A)
+ \tkzGetPoints{C}{D}
+
+ \tkzDrawPolygon(A,B,C)
+
+ \tkzDrawPoints(A,B,C,D)
+ \tkzLabelPoints[below left](A)
+ \tkzLabelPoints(B,D)
+ \tkzLabelPoint[above](C){$C$}
+
+ \tkzDrawCircle[dotted](A,B)
+ \tkzDrawCircle[dotted](B,A)
+
+ \tkzCompass[color=red, very thick](A,C)
+ \tkzCompass[color=red, very thick](B,C)
+
+ \tkzCompass[color=red, very thick](A,D)
+ \tkzCompass[color=red, very thick](B,D)
+\end{tikzpicture}
+\end{document} 

@@ -1,0 +1,54 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\begin{document}
+\begin{tikzpicture}
+  \tkzDefPoints{0/0/A, 5/0/B, 1/4/C}
+  \tkzDefCircle[in](A,B,C)
+  \tkzGetPoint{M}
+  \tkzGetLength{r}
+  \tkzDefCircle[circum](A,B,C)
+  \tkzGetPoint{N}
+  \tkzGetLength{R}
+  \tkzDefPointBy[projection=onto A--B](M)
+  \tkzGetPoint{a}
+  \tkzDefPointBy[projection=onto B--C](M)
+  \tkzGetPoint{b}
+  \tkzDefPointBy[projection=onto A--C](M)
+  \tkzGetPoint{c}
+
+  \tkzDrawCircle[R](M,\r pt)
+  \tkzDrawCircle[R](N,\R pt)
+  \tkzDrawPolygon[very thick](A,B,C)
+  \tkzDrawLines[dotted](N,A N,B N,C)
+  \tkzDrawLines[dashed](M,a M,b M,c)
+  \tkzMarkRightAngles(M,a,B M,b,C M,c,C)
+  \tkzDrawPoints(A,B,C,M,N,a,b,c)
+  \tkzLabelPoints[below left](A,M,a,c)
+  \tkzLabelPoints[below right](B)
+  \tkzLabelPoints[above](C,b)
+  \tkzLabelPoints[below](N)
+\end{tikzpicture}
+
+\end{document} 
+   \tkzInterLC[R](A,C)(S,\rSN pt) \tkzGetFirstPoint{D}
+   \tkzInterLC[R](B,C)(S,\rSN pt) \tkzGetFirstPoint{E}
+   \tkzInterLL(B,S)(D,E) \tkzGetPoint{F}
+   \tkzDrawSegments[thick,red](D,E)
+   \tkzDrawSegments[thick,violet](B,F)
+   \tkzLabelPoints[left](D)
+   \tkzLabelPoints[above left](C,F)
+   \tkzLabelPoints[below right](B)
+   \tkzLabelPoints[below left](A,S)
+   \tkzLabelPoints[above right](E)
+   \tkzMarkAngle[size=0.4 cm](B,F,E)
+   \tkzLabelAngle[pos=0.6](B,F,E){\large $x$}
+   \tkzMarkRightAngle(B,A,C)
+   \tkzDrawPoints(D,E)      
+   \tkzDrawPoint[color=black,fill=black](F)  
+   \tkzDrawPoint[color=black,fill=violet](S)
+
+
+\end{tikzpicture}
+
+\end{document} 

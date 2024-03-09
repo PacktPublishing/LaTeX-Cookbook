@@ -1,0 +1,17 @@
+\documentclass[12pt]{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{breqn}
+\begin{document}
+\begin{frame}
+\begin{dmath*}
+  \left( \frac{f}{g} \right)^\prime(x)
+    = \lim_{h \rightarrow 0}
+      \left( \frac{1}{ g(x+h) g(x) } \right)
+      \left[
+             \frac{ f(x+h) - f(x) }{h} g(x)
+            -\frac{ g(x+h) - g(x) }{h} f(x)
+      \right]
+    = \frac{f^\prime(x)g(x)-f(x)g^\prime(x)}{g^2(x)}
+  \end{dmath*}
+\end{frame}
+\end{document} 

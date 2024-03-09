@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{amsmath}
+\DeclareMathOperator{\im}{im}
+\begin{document}
+\begin{tikzpicture}
+  \matrix (m)
+    [
+      matrix of math nodes,
+      row sep    = 3em,
+      column sep = 4em
+    ]
+    {
+      G              & \im \varphi \\
+      G/\ker \varphi &             \\
+    };
+  \path[-stealth]
+    (m-1-1) edge node [left] {$\pi$} (m-2-1)
+    (m-1-1.east |- m-1-2)
+      edge node [above] {$\varphi$} (m-1-2)
+    (m-2-1) edge node [below] {$\tilde{\varphi}$}
+      (m-1-2);
+\end{tikzpicture}
+\end{document}

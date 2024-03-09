@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\begin{document}
+\noindent
+In a right-angled triangle the two shortest sides
+got widths of 3 and 7, respectively. Then, the
+longest side has a width of \pgfmathparse{min(3^2 + 7^2)}\pgfmathresult.
+The smallest angle is about \pgfmathparse{atan(3/7)}
+\pgfmathprintnumber[precision=2]{\pgfmathresult} degrees.
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{fit}
+\newcommand{\overlay}[2][]{\tikz[overlay,
+  remember picture, #1]{#2}}
+\tikzset{
+  highlighted/.style = { draw, thick, rectangle,
+                         rounded corners, inner sep = 0pt,
+                         fill = red!15, fill opacity = 0.5
+                       }
+}
+\newcommand{\highlight}[1]{%
+  \overlay{
+    \node [fit = (left.north west) (right.south east),
+           highlighted] (#1) {}; }
+}
+\newcommand{\flag}[2]{\overlay[baseline=(#1.base)]
+  {\node (#1) {$#2$};}}
+\begin{document}
+\[
+  M = \begin{pmatrix}
+    \flag{left}{1} & 2 & 3 & 4 & 5 \\
+    6 & 7 & 8 & 9 & 10 \\
+    11 & \flag{before}{12} & \flag{right}{13} & 14 & 15 \\
+    16 & 17 & 18 & 19 & 20
+  \end{pmatrix}
+  \highlight{N}
+  \qquad
+  M^T = \begin{pmatrix}
+    \flag{left}{1} & 6 & 11 & 16 \\
+    2 & 7 & \flag{after}{12} & 17 \\
+    3 & 8 & \flag{right}{13} & 18 \\
+    4 & 9 & 14 & 19 \\
+    5 & 10 & 15 & 20
+  \end{pmatrix}
+  \highlight{NT}
+\]
+\overlay{
+  \draw[->, thick, red, dotted] (before) -- (after);
+  \draw[->, thick, red, dashed] (N) -- (NT)
+    node [pos=0.68, above] {Transpose};
+  \node[above of = N ] { $N$   };
+  \node[above of = NT] { $N^T$ };
+}
+\end{document}

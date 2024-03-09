@@ -1,0 +1,11 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{shift}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis} [shift3d]
+    \addplot3 [surf, colormap/hot2, domain = -2:2, samples = 50]
+      { x/exp(x^2+y^2) };
+  \end{axis}
+\end{tikzpicture}
+\end{document}

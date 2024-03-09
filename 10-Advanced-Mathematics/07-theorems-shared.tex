@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem*{note}{Note}
+\begin{document}
+\begin{dfn}
+  The longest side of a triangle with a right angle
+  is called the \emph{hypotenuse}.
+\end{dfn}
+\begin{note}
+  The other sides are called \emph{catheti},
+  or \emph{legs}.
+\end{note}
+\begin{thm}[Pythagoras]
+  \label{pythagoras}
+  In any right triangle, the square of the hypotenuse
+  equals the sum of the squares of the other sides.
+\end{thm}
+\begin{proof}
+  The proof has been given in Euclid's Elements,
+  Book 1, Proposition 47. Refer to it for details.
+  The converse is also true, see lemma \ref{converse}.
+\end{proof}
+\begin{lem}
+  \label{converse}
+  For any three positive numbers \(x\), \(y\),
+  and \(z\) with \(x^2 + y^2 = z^2\), there is a
+  triangle with side lengths \(x\), \(y\) and \(z\).
+  Such triangle has a right angle, and the hypotenuse
+  has the length \(z\).
+\end{lem}
+\begin{note}
+  This is the converse of theorem \ref{pythagoras}.
+\end{note}
+\end{document}

@@ -1,0 +1,10 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\begin{document}
+\begin{tikzpicture}
+  \begin{polaraxis}[hide axis]
+    \addplot[domain=0:180,smooth] {sin(x)}; 
+  \end{polaraxis}
+\end{tikzpicture}
+\end{document}
