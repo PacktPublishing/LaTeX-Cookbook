@@ -1,0 +1,27 @@
+\documentclass{scrartcl}
+\usepackage[automark]{scrpage2}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\PassOptionsToPackage{svgnames}{xcolor}
+\usepackage{tikz}
+\newcommand{\tikzhead}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-2cm] at (current page.north west)
+      {\begin{tikzpicture}[remember picture, overlay]
+        \path[draw=none, fill=LightSkyBlue] (0,0) rectangle
+          (\paperwidth,2cm);
+        \node[anchor=east,xshift=.9\paperwidth,rectangle,
+              rounded corners=15pt,inner sep=11pt,
+              fill=MidnightBlue,font=\sffamily\bfseries]
+              {\color{white}#1};
+       \end{tikzpicture}
+      };
+   \end{tikzpicture}}
+\clearscrheadings
+\ihead{\tikzhead{\headmark}}
+\pagestyle{scrheadings}
+\begin{document}
+\tableofcontents
+\clearpage
+\blinddocument
+\end{document}

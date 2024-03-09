@@ -1,0 +1,9 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{tikz}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+  \draw[step=0.5cm, color=gray]
+    (current page.south west) grid (current page.north east);
+\end{tikzpicture}
+\end{document}

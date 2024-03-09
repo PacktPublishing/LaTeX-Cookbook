@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{background}
+\usetikzlibrary{calc}
+\backgroundsetup{angle = 0, scale = 1, vshift = -2ex,
+  contents = {\tikz[overlay, remember picture]
+    \draw [rounded corners = 20pt, line width = 1pt,
+           color = blue, fill = yellow!20, double = blue!10]
+           ($(current page.north west)+(1cm,-1cm)$)
+           rectangle ($(current page.south east)+(-1,1)$);}}
+\pagestyle{empty}
+\begin{document}
+\Blinddocument
+\end{document}

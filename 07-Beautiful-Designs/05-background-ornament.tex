@@ -1,0 +1,18 @@
+\documentclass[a7paper,fontsize=19pt]{scrartcl}
+\usepackage[landscape,margin=1.2cm]{geometry}
+\usepackage{pgfornament}
+\usepackage{background}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\backgroundsetup{angle=0, scale=1, opacity=1, color=black!60,
+  contents={\begin{tikzpicture}[remember picture, overlay]
+    \foreach \pos/\sym in {north west/none, north east/v,
+      south west/h, south east/c} {
+        \node[anchor=\pos] at (current page.\pos)
+          {\pgfornament[width=2cm,symmetry=\sym]{63}};}
+  \end{tikzpicture}}}
+\begin{document}
+\noindent\lipsum
+\end{document}
