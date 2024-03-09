@@ -1,0 +1,18 @@
+\documentclass[parskip=half]{scrartcl}
+\usepackage{makeidx}
+\newcommand{\package}[2]{\index{packages!\texttt{#2}}%
+  \index{#1!package \texttt{#2}}\texttt{#2}}
+\makeindex
+\begin{document}
+While \index{glossary}glossary \index{glossary!entry}entries are simply printed in the text,
+an \index{acronym}acronym is firstly fully printed with the \index{acronym!short version}short
+version in \index{parentheses}parentheses, later only in the short version.
+
+A glossary can be done using one of the packages
+\package{glossary}{glossaries} or \package{glossary}{nomencl}.
+For a list of acronyms, suitable are \package{acronyms}{acronym}, \package{acronyms}{acro}
+and also \package{acronyms}{glossaries}.
+\clearpage
+\thispagestyle{empty}
+\printindex
+\end{document}

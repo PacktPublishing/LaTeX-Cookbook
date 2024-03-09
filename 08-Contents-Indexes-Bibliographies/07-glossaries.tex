@@ -1,0 +1,27 @@
+\documentclass[parskip=half]{scrartcl}
+\usepackage[style=long3col]{glossaries}
+\makenoidxglossaries
+\newglossaryentry{tex}{
+  name = {\TeX},
+  sort = {TEX},
+  description = {Sophisticated digital typesetting system,
+                 famous for high typographic quality of
+                 mathematical formulae}
+}
+\newglossaryentry{latex}{
+  name ={\LaTeX},
+  sort = {LATEX},
+  description = {Document markup language based on
+                 \gls{tex}, widely used in academia}
+}
+\newglossaryentry{tikz}{
+  name = {Ti\emph{k}Z},
+  sort = {TikZ},
+  description = {Extremely capable graphics
+                 language for drawing with \gls{tex}}
+}
+\begin{document}
+\gls{tikz} works with plain \gls{tex}. However,
+it is mostly used with \gls{latex}.
+\printnoidxglossary
+\end{document}

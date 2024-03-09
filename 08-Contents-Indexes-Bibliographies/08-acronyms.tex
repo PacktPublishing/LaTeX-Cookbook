@@ -1,0 +1,15 @@
+\documentclass[parskip=half]{scrartcl}
+\usepackage[acronym,style=long3col]{glossaries}
+\setacronymstyle{long-sc-short}
+\newacronym{ctan}{CTAN}{Comprehensive \TeX\ Archive Network}
+\newacronym{tug}{TUG}{\TeX\ Users Group}
+\newacronym{dante}{DANTE}{Deutschsprachige Anwendervereinigung \TeX}
+\makenoidxglossaries
+\begin{document}
+The \gls{ctan} has been founded by members of the \gls{tug} and of
+the German speaking group ``\gls{dante}''.
+
+The \gls{ctan} project is actually independent of \gls{tug} and \gls{dante},
+but \gls{dante} is still the main supporter.
+\printnoidxglossary[type=\acronymtype]
+\end{document}
