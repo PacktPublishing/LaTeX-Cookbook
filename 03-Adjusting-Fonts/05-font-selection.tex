@@ -1,0 +1,16 @@
+\documentclass{article}
+\newcommand{\setfont}[1]{\fontfamily{#1}\selectfont}
+\newenvironment{fontenv}[1]{\fontfamily{#1}\selectfont}{}
+\begin{document}
+Normal text
+
+{\setfont{pzc} Zapf Chancery\par}
+
+Normal text
+
+\begin{fontenv}{pzc}
+Zapf Chancery
+\end{fontenv}
+
+Normal text
+\end{document}

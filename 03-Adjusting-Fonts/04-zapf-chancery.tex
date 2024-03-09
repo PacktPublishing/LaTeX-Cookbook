@@ -1,0 +1,16 @@
+\documentclass{article}
+\newcommand{\zapf}{\fontfamily{pzc}\selectfont}
+\newenvironment{zapfenv}{\fontfamily{pzc}\selectfont}{}
+\begin{document}
+Normal text
+
+{\zapf Zapf Chancery\par}
+
+Normal text
+
+\begin{zapfenv}
+Zapf Chancery
+\end{zapfenv}
+
+Normal text
+\end{document}
