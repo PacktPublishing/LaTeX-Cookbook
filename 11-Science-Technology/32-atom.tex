@@ -1,0 +1,12 @@
+% Hydrogen fluoride HF, diatomic molecule
+\documentclass[border=10pt]{standalone}
+\usepackage{tikzorbital}
+\begin{document}
+\begin{tikzpicture}
+  \atom[name=F, color=red]{
+    blue/270/south/2, blue/180/west/2,
+    blue/90/north/2,  blue/0/east/1}
+  \atom[name=H, color=gray, pos={(1.5,0)},
+      scale=0.7]{gray/180/west/1}
+\end{tikzpicture}
+\end{document}

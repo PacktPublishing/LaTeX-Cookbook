@@ -1,0 +1,11 @@
+\documentclass[border=15pt]{standalone}
+\usepackage{tkz-graph}
+\SetGraphUnit{3}
+\GraphInit[vstyle=Shade]
+\begin{document}
+\begin{tikzpicture}[rotate=18]
+  \Vertices{circle}{A,B,C,D,E}
+  \Edges(A,B,C,D,E,A,D,B,E,C,A)
+  \Edge[label=$7$](A)(B)
+\end{tikzpicture}
+\end{document}

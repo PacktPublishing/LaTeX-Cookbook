@@ -1,0 +1,9 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{chemfig}
+\newcommand{\charge}[1]{\rlap{${}^{\texttt{#1}}$}}
+\newcommand{\positive}{\charge{+}}
+\newcommand{\negative}{\charge{-}}
+\begin{document}
+\chemfig{H\positive-[:322.25]O\negative-[:37.75]H\positive}
+\end{document}
+

@@ -1,0 +1,14 @@
+% Use LuaLaTeX to compile
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz-feynman}
+\usetikzlibrary{positioning,quotes}
+\begin{document}
+\feynmandiagram [horizontal=a to b] {
+  i1 [particle=$e^-$] -- [fermion] a
+    -- [fermion] f1 [particle=$e^-$],
+  a -- [photon, "$\gamma$", red, thick,
+      momentum' = {[arrow style=red]$k$}] b,
+  i2 [particle=$\mu^-$] -- [anti fermion] b
+    -- [anti fermion] f2 [particle=$\mu^-$],
+};
+\end{document}

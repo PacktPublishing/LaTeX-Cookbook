@@ -1,0 +1,15 @@
+% Use LuaLaTeX to compile
+\documentclass[border=10pt]{standalone}
+\usepackage{luacode}
+\begin{document}
+The value of $\sqrt{2}$ is \approx
+\begin{luacode}
+  local x = 1
+  for i=1,10 do
+    x = (x + 2/x)/2
+  end
+  tex.print(x)
+\end{luacode}
+\end{document}
+
+Die Kreiszahl $\pi$ hat den Wert \directlua{tex.print(math.sqrt(2))}.

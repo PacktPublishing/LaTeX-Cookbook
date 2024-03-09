@@ -1,0 +1,10 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{pgf-PeriodicTable}
+\usepgfPTlibrary{colorschemes}
+\pgfPTGroupColors{example}{G1=red!90!black,G2=orange}
+\begin{document}
+\pgfPT[show title=false, back color scheme=example,
+  legend box={draw=blue!50,fill=blue!20},
+  show extra legend,
+  Z list={1,3,4,11,12}]
+\end{document}

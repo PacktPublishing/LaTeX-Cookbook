@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage[hmargin=4cm]{geometry}
+\usepackage{carbohydrates}
+\pagestyle{empty}
+\begin{document}
+\centering
+\glucose[model=fischer,chain]\quad
+\glucose[model={fischer=skeleton},chain]
+
+\vspace{1cm}
+\glucose[model=haworth,chain]\hfill
+\glucose[model=haworth,ring]\hfill
+\glucose[model=chair,ring]
+\end{document}

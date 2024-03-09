@@ -1,0 +1,38 @@
+% Use LuaLaTeX to compile
+\documentclass[border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm, compat=1.18}
+\usepackage{luacode}
+\begin{luacode}
+  function mandelbrot(cx, cy, imax, smax)
+    local x, y, x1, y1, i, s
+    x, y, i, s = 0, 0, 0, 0
+    while (s <= smax) and (i < imax)  do
+      x1 = x * x - y * y + cx
+      y1 = 2 * x * y + cy
+      x = x1
+      y = y1
+      i = i + 1
+      s = x * x + y * y
+    end
+    if (i < imax) then
+      tex.print(i)
+    else
+      tex.print(0)
+    end
+  end
+\end{luacode}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    colorbar,
+    point meta max = 30,
+    tick label style = {font=\tiny},
+    view={0}{90}]
+    \addplot3 [surf, domain = -1.5:0.5, shader = interp,
+               domain y = -1:1, samples = 200]
+        { \directlua{mandelbrot(\pgfmathfloatvalueof\x,
+          \pgfmathfloatvalueof\y,10000,4)} };
+  \end{axis}
+\end{tikzpicture}
+\end{document}

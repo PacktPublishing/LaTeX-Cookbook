@@ -1,0 +1,32 @@
+\documentclass[border={10pt 10pt 30pt 10pt}]{standalone}
+\usepackage{xcolor}
+\usepackage{inconsolata}
+\newcommand{\Cpp}{C\texttt{++}}
+\usepackage{listings}
+\lstset{
+  language     = C++,
+  basicstyle   = \ttfamily,
+  keywordstyle = \color{blue}\textbf,
+  commentstyle = \color{gray},
+  stringstyle  = \color{green!70!black},
+  stringstyle  = \color{red},
+  columns      = fullflexible,
+  numbers      = left,
+  numberstyle  = \scriptsize\sffamily\color{gray},
+  caption      = A hello world program in \Cpp,
+  xleftmargin  = 0.16\textwidth,
+  xrightmargin = 0.16\textwidth,
+  showstringspaces = false,
+  float,
+}
+\begin{document}
+\begin{lstlisting}
+// include standard input/output stream objects:
+#include <iostream>
+// the main method:
+int main()
+{
+    std::cout << "Hello TeX world!" << std::endl;
+}
+\end{lstlisting}
+\end{document}

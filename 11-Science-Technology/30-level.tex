@@ -1,0 +1,28 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikzorbital}
+\usetikzlibrary{positioning,quotes}
+\begin{document}
+\begin{tikzpicture}[note/.style={align=center, font=\sffamily\scriptsize}]
+  \drawLevel[elec = up]{1s1}
+  \drawLevel[elec = up, pos = {(5,0)}]{1s2}
+  \drawLevel[elec = pair, pos = {(2,-2)}, width = 2]{sigma}
+  \drawLevel[pos = {(2,2)}, width = 2]{sigmastar}
+
+  \draw[dashed]
+    (right 1s1) -- (left sigma)
+    (right 1s1) -- (left  sigmastar)
+    (left  1s2) -- (right sigmastar)
+    (left  1s2) -- (right sigma);
+
+  \node[left]  at (left 1s1) {{$1s_1$}};
+  \node[right] at (right 1s2) {{$1s_2$}};
+  \node[right] at (right sigma) {$\sigma$};
+  \node[right] at (right sigmastar) {$\sigma^*$};
+  \node[below = 0.4cm of middle 1s1,   note] {Atomic\\Orbital};
+  \node[below = 0.4cm of middle 1s2,   note] {Atomic\\Orbital};
+  \node[below = 0.4cm of middle sigma, note]
+    {Molecular Orbital};
+  \draw[very thick,-stealth] (-1.5,-2.5)
+    to["Energy", note, sloped] (-1.5,2.5);
+\end{tikzpicture}
+\end{document}
