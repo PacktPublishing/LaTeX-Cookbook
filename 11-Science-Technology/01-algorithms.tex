@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+%\usepackage{algpascal}
+\usepackage{algpseudocode}
+\algnewcommand{\Local}{\State\textbf{local variables: }}
+\newcommand{\Let}[2]{\State $\mathmakebox[1em]{#1} \gets #2$}
+\pagestyle{empty}
+\begin{document}
+%\listofalgorithms
+\begin{algorithm}
+  \caption{Mandelbrot set}
+  \label{alg:mandelbrot}
+  \begin{algorithmic}[1]
+    \Require{$c_x, c_y, \Sigma_{\max} \in \mathds{R},
+      \quad i \in \mathds{N}, \quad i_{\max} > 0,
+      \quad \Sigma_{\max} > 0$}
+    \Function{mandelbrot}{$c_x, c_y, i_{\max},
+              \Sigma_{\max}$}
+      \Local{$x, y, x_1, y_1, i, \Sigma$}
+      \State $x, y, i, \Sigma \gets 0$
+      \Comment{initial zero value for variables}
+      \While{$\Sigma \leq \Sigma_{\max}$
+             and $i < i_{\max}$}
+        \Let{x_1}{x^2 - y^2 + c_x}
+        \Let{y_1}{2xy + c_y}
+        \Let{x}{x_1}
+        \Let{y}{y_1}
+        \Let{\Sigma}{x^2 + y^2}
+      \EndWhile
+      \If{$i < i_{\max}$}
+        \State \Return{$i$}
+      \EndIf
+      \State \Return{0}
+    \EndFunction
+  \end{algorithmic}
+\end{algorithm}
+\end{document}
