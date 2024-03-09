@@ -1,0 +1,40 @@
+% Stefan Kottwitz, LaTeX Cookbook, Packt Publishing, 2015
+% Chapter 5, Designing Tables
+% Adding footnotes to a table
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{bbding}
+\usepackage{threeparttable}
+\begin{document}
+\begin{table}
+  \centering
+  \renewcommand{\arraystretch}{1.6}
+  \begin{threeparttable}
+    \begin{tabular}{lccccc}
+      \toprule
+      Class   & Part page  & Chapters   & Abstract\tnote{1} &
+      Front-/Backmatter\tnote{2}  & Appendix name\tnote{3} \\
+      \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}
+      \cmidrule(lr){4-4}\cmidrule(lr){5-5}\cmidrule(l){6-6}
+      article &            &            & \Checkmark &  \\
+      book    & \Checkmark & \Checkmark &            &
+                \Checkmark & \Checkmark                 \\
+      report  & \Checkmark & \Checkmark & \Checkmark &
+                           & \Checkmark                 \\
+      \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+      \item[1] An environment: \verb|\begin{abstract}| \ldots
+               \verb|\end{abstract}|
+      \item[2] Commands: \verb|\frontmatter|, \verb|\mainmatter|,
+        \verb|\backmatter|
+      \item[3] The \verb|article| class provides the
+        \verb|\appendix| command without
+        ``Appendix'' prefix.
+    \end{tablenotes}
+  \end{threeparttable}
+  \caption{Structuring differences between standard
+           \LaTeX\ classes}
+  \label{comparison}
+\end{table}
+\end{document}

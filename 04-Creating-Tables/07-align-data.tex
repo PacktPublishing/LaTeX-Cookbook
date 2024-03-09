@@ -1,0 +1,21 @@
+% Aligning numeric data
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{chemformula}
+%\sisetup{table-figures-decimal  = 5,
+%         table-figures-integer  = 2,
+%         table-number-alignment = right}
+%\sisetup{table-format = 2.5,
+%         table-number-alignment = right}
+\begin{document}
+  \begin{tabular}{lSS}
+    \toprule
+              & {atomic mass} & {total mass} \\
+    \midrule
+    \ch{C}    &    12.011     & 12.011       \\
+    \ch{H}    &     1.00794   &  6.04764     \\
+    \ch{C2H6} &               & 30.06964     \\
+    \bottomrule
+  \end{tabular}
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{bbding}
+\pagestyle{empty}
+\begin{document}
+\begin{table}
+  \centering
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{lccccc}
+    \toprule
+    Class   & Part page  & Chapters   & Abstract   &
+                    Front-/Backmatter & Appendix name \\
+    \cmidrule(r){1-1}\cmidrule(lr){2-2}\cmidrule(lr){3-3}
+    \cmidrule(lr){4-4}\cmidrule(lr){5-5}\cmidrule(l){6-6}
+    article &            &            & \Checkmark &  \\
+    book    & \Checkmark & \Checkmark &            &
+              \Checkmark & \Checkmark                 \\
+    report  & \Checkmark & \Checkmark & \Checkmark &
+                         & \Checkmark                 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Structuring differences between standard
+           \LaTeX\ classes}
+  \label{comparison}
+\end{table}
+\end{document}

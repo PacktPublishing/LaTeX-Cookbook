@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[table]{xcolor}
+\rowcolors{2}{gray!30}{white}
+\newcommand{\head}[1]{%
+  \textcolor{black}{\textbf{#1}}}
+\renewcommand{\arraystretch}{1.5}
+\begin{document}
+\pagestyle{empty}
+\begin{table}
+  \centering
+  \sffamily
+  \begin{tabular}{rlr}
+    \rowcolor{gray}
+     & \head{Distribution} & \head{Hits} \\
+     1 & MX Linux    & 2717 \\
+     2 & Mint        & 2097 \\
+     3 & EndeavourOS & 2055 \\
+     4 & Manjaro     & 1382 \\
+     5 & Debian      & 1316 \\
+     6 & Ubuntu      & 1083 \\
+     7 & Pop! OS     & 1063 \\
+     8 & Fedora      & 1056 \\
+     9 & openSUSE    & 748  \\
+    10 & Lite        & 685
+  \end{tabular}
+\end{table}
+\end{document}
+\DTLsort[[replacement keys]{sort criteria}{database name}

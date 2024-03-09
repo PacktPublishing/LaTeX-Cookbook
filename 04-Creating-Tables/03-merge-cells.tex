@@ -1,0 +1,24 @@
+% Merging cells
+\documentclass{article}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{metalogo}
+\renewcommand{\arraystretch}{1.6}
+\begin{document}
+\begin{tabular}{@{}p{1.5cm}p{1.6cm}>{\raggedleft}p{1cm}
+                >{\raggedright}p{1.6cm}r@{}}
+  Compiler & \multicolumn{2}{c}{Input}
+           & \multicolumn{2}{c}{Output} \\
+   \cmidrule(r){1-1}\cmidrule(lr){2-3}\cmidrule(l){4-5}
+           & Encoding & Images  & Fonts & Format \\
+   \cmidrule(lr){2-2}\cmidrule(lr){3-3}
+   \cmidrule(lr){4-4}\cmidrule(l){5-5}
+   \LaTeX    & utf8, ascii, applemac, latin1, \ldots
+             & EPS         & Type 1, Type 3 & DVI \\
+   pdf\LaTeX & utf8, ascii, applemac, latin1, \ldots
+             & PDF PNG JPG & Type 1, Type 3 & PDF \\
+  \XeLaTeX, \LuaLaTeX & utf8
+             & PDF PNG JPG & Type 1, Type 3,
+             OpenType, Graphite, TrueType & PDF \\
+\end{tabular}
+\end{document}

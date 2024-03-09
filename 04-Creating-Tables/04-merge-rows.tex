@@ -1,0 +1,20 @@
+% Merging cells, merging rows
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{multirow}
+\begin{document}
+\begin{tabular}{cc}
+  Bundle & Main classes \\
+  \cmidrule(lr){1-1}\cmidrule(lr){2-2}
+  \addlinespace
+  \multirow{4}{*}{\LaTeX\ base} & article  \\
+       & book     \\
+       & report   \\
+       & letter   \\
+  \addlinespace
+  \multirow{4}{*}{KOMA-Script}  & scrartcl \\
+       & scrbook  \\
+       & scrreprt \\
+       & scrlttr2 \\
+\end{tabular}
+\end{document}
