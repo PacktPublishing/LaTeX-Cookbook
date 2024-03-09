@@ -1,0 +1,41 @@
+\documentclass[fontsize=11pt,headings=small,
+  parskip=half]{scrreprt}
+\usepackage[papersize={3.6in,4.8in},margin=0.2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage[demo]{graphicx}
+\pagestyle{empty}
+\renewcommand{\partpagestyle}{empty}
+\renewcommand{\chapterpagestyle}{empty}
+\usepackage{blindtext}
+\frenchspacing
+\usepackage{hyperref}
+\hypersetup{colorlinks}
+\begin{document}
+\title{The Book}
+\subtitle{Some more to know}
+\author{The Author}
+\date{}
+\maketitle
+\tableofcontents 
+\part{First portion}
+\chapter{The beginning}
+Some introductional text comes here.
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{text}
+\end{center}
+\section{A first section}
+Dummy text will follow.
+\blindtext
+\section{Another section}
+\Blindtext
+\appendix
+\part{Appendix}
+\chapter{An addendum}
+\section{Section within the appendix}
+\blindtext
+\end{document}

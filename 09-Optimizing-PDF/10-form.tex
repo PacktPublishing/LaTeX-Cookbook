@@ -1,0 +1,37 @@
+\documentclass[a6paper,landscape,parskip=half]{scrartcl}
+\usepackage[margin=0.4cm]{geometry}
+\usepackage{xcolor}
+\pagecolor{yellow!30}
+\pagestyle{empty}
+\usepackage{hyperref}
+\begin{document}
+\begin{Form}
+  \begin{tabular}{|lr|}\hline
+    \textbf{Dear \TeX\ user, please help in our survey.} &
+      \PushButton[width=1cm, onclick =
+         {app.alert("You may use a pseudonym for the name.")}]%
+         {Info}\\[0.5ex] \hline
+    & \\
+    \TextField[width=5cm]{Name:} &
+    \TextField[width=3cm]{Profession:} \\
+    & \\
+    \ChoiceMenu[radio, radiosymbol=6,
+      width=0.5cm]{Software:\quad}{\TeX\ Live, MiK\TeX} 
+    &\ChoiceMenu[combo, width=3cm]{Editor:}%
+    {TeXworks,TeXstudio,TeXmaker,TeXshop,
+    WinEdt,Kile,Emacs,vi} \\ 
+    & \\ 
+    Membership in: \hfill\CheckBox[width=0.5cm]{TUG}\hfill
+    \CheckBox[width=0.5cm]{DANTE e.V.} &
+    \TextField[width=3cm]{Other:}\\ & \\ \hline
+  \end{tabular}
+  \par
+  \textbf{Notes:}
+  \par
+  \TextField[multiline, width=0.94\paperwidth,
+    height=10\baselineskip]{ }
+\end{Form}%
+\end{document}
+
+
+

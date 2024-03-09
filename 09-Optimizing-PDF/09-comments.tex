@@ -1,0 +1,43 @@
+\documentclass[paper=a4,oneside,fontsize=12pt,
+  parskip=full]{scrartcl}
+\usepackage[svgnames]{xcolor}
+\usepackage[author={Stefan Kottwitz},icon=Note,color=Yellow,open=true,final]{pdfcomment}
+\begin{document}
+%\tableofcontents
+\addsec{Introduction}
+This document will be our starting point for simple
+documents. It is suitable for a single page or up to
+a couple of dozen pages.
+\pdfcomment{Simple documents don't have chapters.}
+
+The text will be divided into \pdfmarkupcomment{sections}{You could additionally use subsections.}.
+\section{The first section}
+This first text will contain
+\begin{pdfsidelinecomment}[color=Red]{A bulleted list}
+\begin{itemize}
+\item a table of contents,
+\item a bulleted list,
+\item headings and some text and math in section,
+\item referencing such as to section \ref{sec:maths} and
+      equation (\ref{eq:integral}).
+\end{itemize}
+\end{pdfsidelinecomment}
+We can use this document as a template for filling in
+our own content.
+\section{Some maths}
+\label{sec:maths}
+When we write a scientific or technical document, we usually
+include math \pdftooltip{formulas}{Formulas can be inline or displayed in their own paragraph}. To get a brief glimpse of the look of
+maths, we will look at an integral approximation of a function
+$f(x)$ as a sum with weights $w_i$:
+\begin{equation}
+  \pdfmargincomment{The equation environment produces a centered
+  equation with whitespace before and after it.}
+  \label{eq:integral}
+  \int_a^b \pdfmarkupcomment{f(x)}{This function will be approximated.}\,\mathrm{d}x \approx (b-a)
+  \sum_{i=0}^n \pdfmarkupcomment{w_i}{Those are the weights} f(x_i)
+\end{equation}
+\pdffreetextcomment[subject={Summary},width=7.5cm,height=2.2cm,opacity=0.5,voffset=-3cm]{The whole document is an example
+showing how to write a small document.
+Now we enriched it with sample comments.}
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\begin{document}
+See \hyperlink{mytarget}{next page}.
+Refer to the \hyperref[eq:einstein]{mass-energy equivalence}.
+\newpage
+\hypertarget{mytarget}{Here} starts a new page.
+\begin{equation}
+  \label{eq:einstein}
+  E = mc^2 
+\end{equation}
+\href{http://latex-community.org}{LaTeX Community Forum}
+
+\url{http://texample.net}
+
+\nolinkurl{http://texdoc.net}
+
+
+\newcommand{\baseaddress}{http://latex-community.org/}
+\newcommand{\articleaddress}{\baseaddress
+  know-how/latexs-friends/61/486/}
+\hyperref{\articleaddress}{running}{lualatex}
+  {Running MetaPost within LuaLaTeX}
+\end{document}
+
