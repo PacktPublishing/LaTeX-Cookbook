@@ -50,7 +50,7 @@ For numerous years, Stefan has been providing LaTeX support on internet forums. 
 
 A moderator of the TeX Stack Exchange site and [matheplanet.com](https://matheplanet.com), he publishes ideas and news from the TeX world on his blogs [LaTeX.net](https://latex.net) and [TeX.co](https://tex.co).
 
-He also authored the LaTeX Beginner’s Guide in 2011, with the second edition in 2021, and LaTeX Graphics with TikZ in 2023, all published by Packt.
+He also authored the *LaTeX Beginner’s Guide* in 2011, with the second edition in 2021, and *LaTeX Graphics with TikZ* in 2023, all published by Packt.
 
 
 
