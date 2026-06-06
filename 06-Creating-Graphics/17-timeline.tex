@@ -1,0 +1,49 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{timeline}
+\begin{document}
+\begin{tikzpicture}
+  \timeline{5}
+  \begin{phases}
+    \initialphase{involvement degree=3cm,phase color=blue}
+    \phase{between week=1 and 2 in 0.4,
+      involvement degree=5cm,phase color=green!50!black}
+    \phase{between week=2 and 3 in 0.2,
+      involvement degree=6cm,phase color=red!40!black}
+    \phase{between week=3 and 4 in 0.5,
+      involvement degree=3cm,phase color=red!90!black}
+    \phase{between week=4 and 5 in 0.3,
+      involvement degree=2.5cm,phase color=red!40!yellow}
+  \end{phases}
+  \node [xshift=-0.6cm,yshift=1cm,anchor=east,
+         font=\Large\bfseries] at (phase-0.180) {Author};
+  \node [xshift=-0.6cm,yshift=-1cm,anchor=east,
+         font=\Large\bfseries] at (phase-0.180) {Publisher};
+  \addmilestone{at=phase-0.120,direction=120:1cm,
+    text={Concept}, text options={above}}
+  \addmilestone{at=phase-0.90,direction=90:1.2cm,
+    text={Outline}}
+  \addmilestone{at=phase-1.110,direction=110:1.5cm,
+    text={Research}}
+  \addmilestone{at=phase-2.100,direction=100:1cm,
+    text={Writing}}
+  \addmilestone{at=phase-2.60,direction=90:1.5cm,
+     text={First draft}}
+  \addmilestone{at=phase-3.90,direction=90:1.2cm,
+    text={Second draft}}
+   \addmilestone{at=phase-4.90,direction=90:0.8cm,
+     text={Approval of print draft}}
+   \addmilestone{at=phase-0.270,direction=270:1cm,
+     text={Concept Review}, text options={below}}
+   \addmilestone{at=phase-2.270,direction=270:1cm,
+    text={First Review}}
+   \addmilestone{at=phase-3.250,direction=250:0.8cm,
+     text={Second Review}}
+   \addmilestone{at=phase-3.300,direction=270:1.5cm,
+     text={Approval required}}
+   \addmilestone{at=phase-4.260,direction=270:2.2cm,
+    text={Draft for printing}}
+  \addmilestone{at=phase-4.300,direction=300:1cm,
+    text={Publication}}
+\end{tikzpicture}
+\end{document}

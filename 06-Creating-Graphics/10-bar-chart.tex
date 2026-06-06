@@ -1,0 +1,23 @@
+\documentclass[border=15pt]{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[title    = Contributions per category
+                          at LaTeX-Community.org,
+    xbar,
+    y axis line style = { opacity = 0 },
+    axis x line       = none,
+    tickwidth         = 0pt,
+    enlarge y limits  = 0.2,
+    enlarge x limits  = 0.02,
+    nodes near coords,
+    symbolic y coords = {LaTeX, Tools, Distributions, Editors},
+  ]
+  \addplot coordinates { (57727,LaTeX)        (5672,Tools)
+                         (2193,Distributions) (11106,Editors) };
+  \addplot coordinates { (14320,LaTeX)        (1615,Tools)
+                         (560,Distributions)  (3075,Editors)  };
+  \legend{Topics, Posts}
+  \end{axis}
+\end{tikzpicture}
+\end{document}
