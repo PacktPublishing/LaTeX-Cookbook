@@ -1,0 +1,17 @@
+% LaTeX Cookbook, Packt Publishing, 2015
+% Stefan Kottwitz
+\documentclass[demo]{article}% demo option for dummy images, remove it
+\usepackage{tikz}
+\newsavebox{\picbox}
+\newcommand{\cutpic}[3]{
+  \savebox{\picbox}{\includegraphics[width=#2]{#3}}
+  \tikz\node [draw, rounded corners=#1, line width=4pt, color=white,
+      minimum width=\wd\picbox, minimum height=\ht\picbox,
+      path picture={
+        \node at (path picture bounding box.center) {
+          \usebox{\picbox}};
+      }] {};}
+\begin{document}
+\cutpic{1cm}{8cm}{filename}
+\end{document}
+    

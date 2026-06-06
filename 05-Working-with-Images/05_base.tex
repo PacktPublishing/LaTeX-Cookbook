@@ -1,0 +1,14 @@
+% LaTeX Cookbook, Packt Publishing, 2015
+% Stefan Kottwitz
+\documentclass[demo]{article}% demo option for dummy images, remove it
+\usepackage{tikz}
+\newcommand{\roundpic}[4][]{
+  \tikz[baseline=(photo.center)]
+    \node (photo) [circle, minimum width = #2,
+      path picture = {
+        \node [#1] at (path picture bounding box.center)
+        {\includegraphics[width=#3]{#4}};
+      }] {};}
+\begin{document}
+\roundpic[xshift=-1cm,yshift=-2.6cm]{5.8cm}{9cm}{filename}
+\end{document}

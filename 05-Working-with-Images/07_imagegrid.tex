@@ -1,0 +1,17 @@
+% LaTeX Cookbook, Packt Publishing, 2015
+% Stefan Kottwitz
+\documentclass{article}
+\usepackage[demo]{graphicx}% demo option for dummy images, remove it
+\usepackage{collcell}
+\newcommand{\includepic}[2]{\includegraphics[width=3cm,
+  height=2cm,keepaspectratio]{#1}}
+\newcolumntype{I}{@{\hspace{1ex}}
+  >{\collectcell\includepic}c<{\endcollectcell}}
+\begin{document}
+\begin{tabular}{III}
+  meadow  & sea     & beach \\
+  blanket & tunnel  & tired \\
+  pond    & chewing & halfasleep
+\end{tabular}
+\end{document}
+    
